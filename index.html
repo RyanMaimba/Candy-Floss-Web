@@ -407,105 +407,7 @@
   #candy-floss-site .toast.show {opacity:1;transform:translateX(-50%) translateY(0);}
   #candy-floss-site .toast .dot {width:8px;height:8px;border-radius:50%;background:var(--candy);}
 
-  #candy-floss-site /* ================= INTRO VIDEO ================= */
-  .intro-overlay {
-    position:fixed;inset:0;background:#000;z-index:300;opacity:1;pointer-events:auto;
-    display:flex;align-items:center;justify-content:center;transition:opacity .5s ease;
-  }
-  #candy-floss-site .intro-overlay.hide {opacity:0;pointer-events:none;}
-  #candy-floss-site .intro-video-wrap {position:relative;width:100%;height:100%;display:flex;align-items:center;justify-content:center;}
-  #candy-floss-site .intro-video-wrap video {width:100%;height:100%;object-fit:cover;display:block;}
-  #candy-floss-site .intro-logo {
-    position:absolute;top:32px;left:32px;height:34px;width:auto;z-index:2;filter:drop-shadow(0 6px 16px rgba(0,0,0,0.5));
-  }
-  #candy-floss-site .intro-controls {
-    position:absolute;top:24px;right:24px;display:flex;gap:10px;z-index:3;
-  }
-  #candy-floss-site .intro-btn {
-    background:rgba(14,14,16,0.55);border:1px solid rgba(255,255,255,0.35);color:#fff;
-    font-size:12px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;
-    padding:10px 18px;border-radius:30px;display:flex;align-items:center;gap:8px;
-    backdrop-filter:blur(6px);transition:background .2s ease,border-color .2s ease;
-  }
-  #candy-floss-site .intro-btn:hover {background:rgba(255,255,255,0.15);border-color:#fff;}
-  #candy-floss-site .intro-progress {
-    position:absolute;left:0;bottom:0;height:3px;width:0%;background:var(--candy);z-index:3;
-    transition:width .1s linear;
-  }
-  #candy-floss-site .intro-caption {
-    position:absolute;bottom:36px;left:50%;transform:translateX(-50%);text-align:center;z-index:2;
-    color:#fff;
-  }
-  #candy-floss-site .intro-caption .eyebrow {color:var(--sugar);margin-bottom:10px;}
-  #candy-floss-site .intro-caption h2 {font-size:clamp(24px,4.5vw,42px);text-shadow:0 8px 24px rgba(0,0,0,0.5);}
-  @media (max-width:640px){
-    #candy-floss-site .intro-caption {bottom:22px;}
-    #candy-floss-site .intro-logo {height:26px;top:20px;left:20px;}
-    #candy-floss-site .intro-controls {top:16px;right:16px;}
-    #candy-floss-site .intro-btn {padding:8px 14px;font-size:11px;}
-  }
 
-  #candy-floss-site /* ================= DROP COUNTDOWN POPUP ================= */
-  .drop-overlay {
-    position:fixed;inset:0;background:rgba(14,14,16,0.72);z-index:120;opacity:0;pointer-events:none;
-    transition:opacity .35s ease;display:flex;align-items:center;justify-content:center;padding:20px;
-  }
-  #candy-floss-site .drop-overlay.show {opacity:1;pointer-events:auto;}
-  #candy-floss-site .drop-popup {
-    position:relative;width:480px;max-width:100%;background:var(--ink);color:#fff;
-    padding:44px 38px 38px;text-align:center;overflow:hidden;
-    transform:scale(0.92) translateY(10px);opacity:0;transition:all .35s cubic-bezier(.34,1.56,.64,1);
-    box-shadow:0 40px 90px rgba(0,0,0,0.45);
-  }
-  #candy-floss-site .drop-overlay.show .drop-popup {transform:scale(1) translateY(0);opacity:1;}
-  #candy-floss-site .drop-popup .halo-ring {
-    position:absolute;width:260px;height:170px;border:3px solid rgba(255,255,255,0.07);
-    border-radius:50%;top:-70px;right:-90px;pointer-events:none;
-  }
-  #candy-floss-site .drop-popup .drop-close {
-    position:absolute;top:14px;right:14px;background:none;border:none;color:#fff;font-size:22px;
-    line-height:1;padding:6px;opacity:.7;z-index:2;
-  }
-  #candy-floss-site .drop-popup .drop-close:hover {opacity:1;}
-  #candy-floss-site .drop-popup .eyebrow {position:relative;z-index:2;color:var(--candy);}
-  #candy-floss-site .drop-popup h3 {
-    position:relative;z-index:2;font-size:clamp(28px,6vw,38px);margin:16px 0 10px;
-  }
-  #candy-floss-site .drop-popup p.drop-sub {
-    position:relative;z-index:2;color:#a6a4a0;font-size:13.5px;line-height:1.6;margin:0 0 26px;
-  }
-  #candy-floss-site .drop-countdown {
-    position:relative;z-index:2;display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:28px;
-  }
-  #candy-floss-site .drop-countdown .unit {
-    background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.12);padding:14px 4px;
-  }
-  #candy-floss-site .drop-countdown .unit .num {
-    font-family:'Anton',sans-serif;font-size:clamp(22px,5vw,32px);color:#fff;line-height:1;
-  }
-  #candy-floss-site .drop-countdown .unit .lbl {
-    font-size:9.5px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:#8c887f;margin-top:6px;display:block;
-  }
-  #candy-floss-site .drop-popup .drop-actions {position:relative;z-index:2;display:flex;gap:12px;flex-wrap:wrap;justify-content:center;}
-  #candy-floss-site .drop-popup .drop-actions .btn {flex:1;min-width:150px;}
-  #candy-floss-site .drop-popup .field-group {position:relative;z-index:2;text-align:left;}
-  #candy-floss-site .drop-popup .field-group label {color:#c9c7c4;}
-  #candy-floss-site .drop-popup .field-group input {
-    background:rgba(255,255,255,0.06);border-color:rgba(255,255,255,0.18);color:#fff;
-  }
-  #candy-floss-site .drop-popup .field-group input::placeholder {color:#6f6d69;}
-  #candy-floss-site .drop-popup .drop-form-error {
-    position:relative;z-index:2;background:rgba(255,47,126,0.14);color:#ff8fb4;font-size:12px;font-weight:600;
-    padding:10px 12px;border-radius:var(--radius);margin-bottom:14px;display:none;text-align:left;
-  }
-  #candy-floss-site .drop-popup .drop-form-error.show {display:block;}
-  #candy-floss-site .drop-popup .drop-fine {
-    position:relative;z-index:2;font-size:11px;color:#6f6d69;margin-top:14px;line-height:1.6;
-  }
-  @media(max-width:480px) {
-    #candy-floss-site .drop-popup {padding:38px 22px 30px;}
-    #candy-floss-site .drop-countdown {gap:6px;}
-  }
 
   #candy-floss-site /* ================= RESPONSIVE ================= */
   @media(max-width:1100px) {
@@ -584,67 +486,16 @@
 
 <div class="scroll-progress" id="scrollProgress"></div>
 
-<!-- INTRO VIDEO -->
-<div class="intro-overlay" id="introOverlay" role="dialog" aria-modal="true" aria-label="Candy Floss intro video">
-  <div class="intro-video-wrap">
-    <video id="introVideo" playsinline muted autoplay preload="auto">
-      <source src="intro.mp4" type="video/mp4">
-    </video>
-    <div class="intro-caption">
-      <span class="eyebrow"><span class="halo"></span> Small batch · South Africa</span>
-      <h2>Royal Edition 001 — Made for Icons.</h2>
-    </div>
-    <div class="intro-controls">
-      <button class="intro-btn" id="introMuteBtn" type="button" aria-label="Unmute video">🔇 Sound</button>
-      <button class="intro-btn" id="introSkipBtn" type="button">Skip Intro ✕</button>
-    </div>
-    <div class="intro-progress" id="introProgress"></div>
-  </div>
-</div>
-
-<!-- ROYAL EDITION 001 DROP COUNTDOWN POPUP -->
-<div class="drop-overlay" id="dropOverlay">
-  <div class="drop-popup" role="dialog" aria-modal="true" aria-label="Royal Edition 001 countdown">
-    <div class="halo-ring"></div>
-    <button class="drop-close" id="dropCloseBtn" aria-label="Close">&times;</button>
-    <span class="eyebrow"><span class="halo"></span> COMING SOON</span>
-    <h3>Royal Edition 001 Drops In</h3>
-    <p class="drop-sub">Small batch. Once it's gone, it's gone. Set a reminder so you don't miss it.</p>
-    <div class="drop-countdown" id="dropCountdown">
-      <div class="unit"><span class="num" id="dropDays">00</span><span class="lbl">Days</span></div>
-      <div class="unit"><span class="num" id="dropHours">00</span><span class="lbl">Hours</span></div>
-      <div class="unit"><span class="num" id="dropMinutes">00</span><span class="lbl">Mins</span></div>
-      <div class="unit"><span class="num" id="dropSeconds">00</span><span class="lbl">Secs</span></div>
-    </div>
-    <div class="drop-form-error" id="dropFormError">Please enter your name and a valid WhatsApp number.</div>
-    <form id="dropNotifyForm">
-      <div class="field-group">
-        <label for="dropName">Your Name</label>
-        <input type="text" id="dropName" placeholder="e.g. Thabo Mokoena" autocomplete="name">
-      </div>
-      <div class="field-group">
-        <label for="dropWhatsapp">WhatsApp Number</label>
-        <input type="tel" id="dropWhatsapp" placeholder="e.g. 079 206 4469" autocomplete="tel">
-      </div>
-      <div class="drop-actions">
-        <button type="submit" class="btn btn-candy btn-block">Notify Me On WhatsApp</button>
-      </div>
-    </form>
-    <button class="btn btn-ghost btn-block" id="dropDismissBtn" type="button" style="position:relative;z-index:2;margin-top:10px;">Not Now</button>
-    <p class="drop-fine">We'll message you on WhatsApp the moment Royal Edition 001 drops. No spam.</p>
-  </div>
-</div>
-
 <!-- ANNOUNCEMENT -->
 <div class="announce">
   <div class="track">
     <span>
       <span>FREE SHIPPING WITHIN SOUTH AFRICA ON ORDERS OVER R1000</span>
-      <span>WORLDWIDE SHIPPING AVAILABLE</span>
-      <span>THE ROYAL EDITION COMING SOON</span>
+      <span>NATIONWIDE SHIPPING AVAILABLE</span>
+      <span>ROYAL EDITION COLLECTION NOW LIVE </span>
       <span>FREE SHIPPING WITHIN SOUTH AFRICA ON ORDERS OVER R1000</span>
-      <span>WORLDWIDE SHIPPING AVAILABLE</span>
-      <span>THE ROYAL EDITION COMING SOON</span>
+      <span>NATIONWIDE SHIPPING AVAILABLE</span>
+      <span>ROYAL EDITION NOW LIVE </span>
     </span>
   </div>
 </div>
@@ -710,8 +561,8 @@ Luxury-inspired streetwear designed to make you stand out and own the moment. �
 <div class="strip">
   <div class="track">
     <span>
-      <span>CANDY FLOSS</span><span>ROYAL EDITION 001</span><span>CRAFTED IN MZANSI </span><span>NOT YOUR AVERAGE CLOTHING </span>
-      <span>CANDY FLOSS</span><span>ROYAL EDITION 001</span><span>CRAFTED IN MZANSI </span><span>NOT YOUR AVERAGE CLOTHING </span>
+      <span>CANDY FLOSS</span><span>ROYAL EDITION 001</span><span>THESE ARE NOT CLOTHES  </span><span> THEY ARE PIECES  </span>
+      <span>CANDY FLOSS</span><span>ROYAL EDITION 001</span><span>THESE ARE NOT CLOTHES </span><span> THEY ARE PIECES </span>
     </span>
   </div>
 </div>
